@@ -1,0 +1,9 @@
+name: Instability test
+agent:
+  type: Unity::VM
+  image: slough-ops/win10-base:stable
+  flavor: m1.large
+  name: Test instablity
+commands:
+  - echo %YAMATO_WORK_DIR%
+  - echo \"##yamato[instability 'This job is unstable']\"
